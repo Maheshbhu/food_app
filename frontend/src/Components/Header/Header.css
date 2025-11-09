@@ -1,0 +1,227 @@
+/* 🌟 Header Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: #fc8019;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 🍴 Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* 🔗 Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+/* 👤 Profile Name */
+.profile-name {
+  background: white;
+  color: #fc8019;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-name:hover {
+  background: #ffe0b2;
+  transform: translateY(-1px);
+}
+
+/* 🚪 Logout Button */
+.logout-btn {
+  margin-left: 12px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #fc8019;
+  transform: translateY(-1px);
+}
+
+/* 🛒 Cart Button */
+.cart-btn {
+  margin-left: 25px;
+  background-color: white;
+  color: #fc8019;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #ffe8d1;
+  transform: scale(1.07);
+}
+
+/* 🍔 Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* 🔄 Hamburger Active Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 💻 Medium Screens */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 24px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+}
+
+/* 📱 Small Screens (Dropdown Nav) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #fc8019;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .logo {
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+  }
+
+  .cart-btn {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+/* 📲 Extra Small Screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .profile-name,
+  .logout-btn,
+  .cart-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .cart-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

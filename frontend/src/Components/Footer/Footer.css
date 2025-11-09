@@ -1,0 +1,44 @@
+.footer {
+  background: var(--orange);
+  color: #fff;
+  padding: 18px 0;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: opacity 0.3s;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+/* 🔹 Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+    font-size: 0.95rem;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: 5px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .footer a {
+    display: block;
+    margin: 6px 0;
+  }
+}

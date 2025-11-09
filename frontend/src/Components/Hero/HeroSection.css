@@ -1,0 +1,125 @@
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  position: relative;
+}
+
+.offer-text {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.hero-content input[type="text"] {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #fc8019;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #e67300;
+  transform: scale(1.05);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.carousel-indicators span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-indicators span.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+  .hero-carousel { height: 350px; }
+  .hero-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .hero-content h1 { font-size: 1.5rem; }
+  .hero-content p { font-size: 0.9rem; }
+  .hero-content input[type="text"] { font-size: 0.9rem; padding: 8px 12px; }
+  .hero-content button { font-size: 0.9rem; padding: 8px 15px; }
+}

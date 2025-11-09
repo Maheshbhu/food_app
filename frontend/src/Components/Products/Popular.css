@@ -1,0 +1,4 @@
+.popular{padding:18px 0}
+.popular h3{margin:0 0 12px}
+.popular-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.popular-scroll::-webkit-scrollbar{display:none}

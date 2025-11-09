@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+*.env
+
+# Build and log files
+/build
+/frontend/build
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode and IDE files
+.vscode/
+.idea/
+
+# Render / deployment artifacts
+*.tar
+*.tgz
+
+# Optional - if you ever use local DB or uploads
+/uploads/
